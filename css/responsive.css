@@ -1,0 +1,857 @@
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+
+@media (max-width : 1950px) {
+    header-content {
+        padding: 16rem 6rem 0px 5%;
+    }
+}
+
+
+
+@media (max-width : 1400px) {
+    #home::after {
+        display: none;
+    }
+
+    .imghover {
+        display: none;
+    }
+
+    .header-content {
+        width: 100%;
+        padding: 10rem 0 0 10%;
+    }
+
+    .home-social {
+        margin-top: 5%;
+    }
+
+    .header-content p {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        width: 80%;
+    }
+}
+
+@media (max-width : 1100px) {
+
+
+    .about-content p {
+        margin: 2rem 0 0rem;
+        font-size: 1.2rem;
+        padding: 1.5rem 6rem;
+    }
+
+    .education-content::before {
+        content: '';
+        top: 0;
+        left: -2.33rem;
+        position: absolute;
+        background-color: var(--main-color);
+        width: 1.7vw;
+        height: 1.7vw;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width : 950px) {
+    footer .animate {
+        display: none;
+    }
+
+
+    .logo {
+        height: 9vh;
+    }
+
+    .header-content {
+        width: 100%;
+        padding: 10rem 0 0 11%;
+    }
+
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 0rem;
+        padding-left: 3.5rem;
+        position: absolute;
+        top: 99%;
+        left: -110%;
+        background: var(--main-color);
+        transition: .2s ease;
+        transition-delay: .3s;
+        margin: 0;
+        z-index: 1;
+    }
+
+    nav .active-nav {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: var(--bg-color);
+        z-index: -1;
+        transition: .3s ease;
+        transition-delay: 0s;
+    }
+
+    nav.active {
+        left: 0%;
+    }
+
+    nav a {
+        transform: translateX(-10rem);
+        transition: .3s ease;
+        transition-delay: 0s;
+    }
+
+    .active a {
+        transform: translateX(0rem);
+    }
+
+    .active .active-nav {
+        left: 0%;
+        transition-delay: .4s;
+    }
+
+    nav a {
+        display: inline;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 14%;
+        right: 5%;
+        font-size: 2.5rem;
+    }
+
+    .education-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .input-field input {
+        padding: 0.9rem 1rem;
+        border-radius: 6px;
+        width: 28vw;
+    }
+
+    .input-field textarea {
+        width: 59vw;
+    }
+
+    .circle-img {
+        top: 2%;
+        left: 1%;
+        position: absolute;
+        height: 94%;
+        width: 94%;
+    }
+
+    .containe-item {
+        height: 65%;
+    }
+}
+
+@media (max-width : 850px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+
+    .swiper {
+        margin-top: 3rem;
+        height: 52vh;
+    }
+
+    #menu-icon {
+        top: 22%;
+    }
+
+    .logo {
+        display: inline-block;
+        height: 7vh;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        margin-top: 3%;
+        min-height: 0;
+    }
+
+    #skills {
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        color: var(--text-color);
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .education-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .education-content {
+        padding: .6rem;
+    }
+
+    .header-content {
+        padding: 10rem 0 0 11%;
+    }
+
+
+    .education-row {
+        gap: 0;
+    }
+
+    .contact-box {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .education-content::before {
+        left: -2.24rem;
+    }
+}
+
+
+@media (max-width : 795px) {
+
+    #projects h2 {
+        padding-top: 7.5rem;
+    }
+
+    .swiper {
+        height: 75vh;
+    }
+
+    .hover h3 {
+        text-align: center;
+    }
+
+    .containe-item {
+        height: 95%;
+    }
+
+
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+
+    .swiper-pagination {
+        display: block !important;
+    }
+
+    .footer-btn i {
+        font-size: 3rem;
+    }
+
+    footer p {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .date {
+        color: var(--main-color);
+        font-size: 1.5rem;
+    }
+
+    .education-content {
+        padding: 2rem;
+    }
+
+    .skills-content h3 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .input-field input::placeholder,
+    .input-field textarea::placeholder {
+        color: var(--text-color);
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .home-social {
+        margin-top: 5%;
+        width: 17rem;
+    }
+
+    .about-img img {
+        width: 23vw;
+    }
+
+    .home-social a {
+        height: 50px;
+        width: 50px;
+        font-size: 2.1rem;
+    }
+
+    .btn {
+        display: flex;
+        color: var(--bg-color);
+        width: 11rem;
+        height: 6vh;
+        font-size: 1.5rem;
+    }
+
+    .about-img {
+        width: 29vw;
+        height: 29vw;
+    }
+
+
+    html {
+        font-size: 71%;
+    }
+
+    #menu-icon {
+        font-size: 3rem;
+    }
+
+    form {
+        width: 90vw;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    .input-field input {
+        width: 100%;
+    }
+
+    .input-field textarea {
+        width: 100%;
+    }
+
+    .skills-row {
+        padding-top: 2rem;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+
+    .skills-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 40%;
+        width: 75vw;
+    }
+
+    .header-content {
+        padding: 8rem 0 0 9%;
+    }
+
+    .education-column {
+        width: 75vw;
+        align-items: center;
+    }
+
+    .education-row {
+        flex-direction: column;
+    }
+
+    .input-field input {
+        width: 100%;
+        font-size: 2rem;
+        border: 2px solid var(--main-color);
+    }
+
+    .input-field textarea {
+        border: 2px solid var(--main-color);
+    }
+
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .skills-title h2 {
+        font-size: 4rem;
+    }
+
+
+    .education-content p {
+        font-size: 1.4rem;
+    }
+
+    .header-content h1 {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    .heading-about h1 {
+        font-size: 4rem;
+    }
+
+    .about-content h2 {
+        font-size: 3rem;
+    }
+
+    .education-content h3 {
+        font-size: 2.3rem;
+    }
+
+    .about-content p {
+        margin: 0rem 0 0rem;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    #education h1 {
+        font-size: 4rem;
+    }
+
+    .education-column h2 {
+        font-size: 2.5rem;
+        margin: 0rem 0 2rem;
+    }
+
+    .education-column .education-box .animate {
+        width: 90vw;
+    }
+
+    .skill-animation {
+        width: 85vw;
+    }
+
+    #contact {
+        min-height: 100vh;
+        padding: 0;
+        gap: 3rem;
+    }
+}
+
+
+@media (max-width : 560px) {
+    /* .containe-item {
+        height: 55%;
+    } */
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 3%; */
+        min-height: 100vh;
+        padding: 0;
+    }
+
+    header a {
+        margin: 0;
+    }
+
+    .education-content {
+        padding: 2rem;
+    }
+
+    .education-content h3 {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        position: relative;
+        padding: 1rem 3.5rem;
+        color: var(--text-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    footer p {
+        /*font-size: 1rem;
+*/
+        font-weight: 600;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .education-content::before {
+        left: -2.25rem;
+        width: 2.7vw;
+        height: 2.7vw;
+    }
+
+    .header-content {
+        padding: 8rem 0 0 6%;
+    }
+
+    .logo {
+        margin-left: 2rem;
+    }
+
+    nav {
+        left: -120%;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 24%;
+    }
+
+
+}
+
+@media (max-width : 420px) {
+
+    .swiper {
+        height: 60vh;
+    }
+
+    /* .containe-item {
+        height: 70%;
+    } */
+
+    .footer-btn i {
+        font-size: 2rem;
+    }
+
+    .input-field textarea {
+        color: var(--text-color);
+        /* padding: 0.3rem 1rem; */
+    }
+
+    #menu-icon {
+        font-size: 3rem;
+    }
+
+    .logo {
+        height: 6vh;
+    }
+
+    html {
+        font-size: 56%;
+    }
+
+    .education-content h3 {
+        font-size: 2rem;
+
+    }
+
+
+    nav a {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    nav {
+        padding-left: 2.5rem;
+    }
+
+
+    .header-content h1 {
+        font-size: 4rem;
+    }
+
+    .header-content {
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #education h1 {
+        font-size: 3.6rem;
+    }
+
+    .skills-title h2 {
+        font-size: 3.6rem;
+    }
+
+    #contact h2 {
+        font-size: 3.6rem;
+        padding-bottom: 3rem;
+    }
+
+    .heading-about h1 {
+        font-size: 3.6rem;
+    }
+
+    .header-content p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .education-column h2 {
+        font-size: 3rem;
+    }
+
+    .about-content h2 {
+        font-size: 3rem;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+    }
+
+    .education-content p {
+        font-size: 1.5rem;
+    }
+
+    .education-column {
+        width: 88vw;
+    }
+
+    .btn {
+        width: 12rem;
+        font-size: 1.5rem;
+        height: 4rem;
+    }
+
+    .education-content::before {
+        left: -2.55rem;
+        width: 3.7vw;
+        height: 3.7vw;
+    }
+
+    .bar {
+        position: absolute;
+        left: 0.3rem;
+        top: 0.5rem
+    }
+
+    .skills-col {
+        width: 91vw;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .footer-btn {
+        padding: 1rem;
+        position: relative;
+        border: 2px solid var(--main-color);
+        text-decoration: none;
+        position: relative;
+        background: var(--main-color);
+        border-radius: 0.5rem;
+        overflow: hidden;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills-content h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .input-field input::placeholder,
+    .input-field textarea::placeholder {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .input-field input {
+        font-size: 1.8rem;
+    }
+
+    .input-field textarea {
+        font-size: 1.8rem;
+    }
+
+    .home-social {
+        margin-top: 5%;
+        width: 22rem;
+    }
+
+    .home-social a {
+        font-size: 2.5rem;
+    }
+
+    .about-img img {
+        width: 34vw;
+    }
+
+    .about-img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 43vw;
+        height: 43vw;
+    }
+
+    #contact {
+        min-height: 100vh;
+        padding: 0;
+    }
+
+    /* footer{
+        padding: 2rem 3.5rem;
+    } */
+}
+
+
+@media (max-width : 321px) {
+
+
+    .header-content {
+
+        padding-top: 4rem;
+    }
+
+    .home-social {
+        margin-top: 6%;
+        padding-bottom: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .education-column {
+        width: 95vw;
+    }
+
+    .education-content h3 {
+        /*font-size: 1rem;
+*/
+    }
+
+    .education-content::before {
+        left: -2.15rem;
+        width: 3.7vw;
+        height: 3.7vw;
+    }
+
+    .home-social a {
+        height: 35px;
+        width: 35px;
+        /*font-size: 1.1rem;*/
+    }
+
+    .btn {
+        width: 8rem;
+        height: 6vh;
+        text-decoration: none;
+    }
+
+    nav a {
+        /*font-size: 1rem;
+*/
+        margin: 0;
+    }
+
+    nav {
+        padding-left: 2.5rem;
+    }
+
+    .btn-box {
+        margin-top: 1rem;
+    }
+
+    .header-content p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    #menu-icon {
+        /*font-size: 1.5rem;*/
+    }
+
+    .header-content h1 {
+        /*font-size: 1.8rem;*/
+    }
+
+    .animate-text h3 {
+        /*font-size: 1.5rem;*/
+    }
+
+    .heading-about h1 {
+        /*font-size: 2rem;
+*/
+        margin-bottom: 2rem;
+    }
+
+    .about-content p {
+        margin: 0rem 0 0rem;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .about-content h2 {
+        /*font-size: 1.5rem;*/
+    }
+
+    #education h1 {
+        /*font-size: 2rem;
+*/
+    }
+
+    .education-column h2 {
+        /*font-size: 1.5rem;*/
+    }
+
+    .title {
+        /*font-size: 1.5rem;*/
+        font-weight: 700;
+    }
+
+    .skills-title h2 {
+        /*font-size: 2rem;
+*/
+    }
+
+    #contact h2 {
+        padding-top: 2rem;
+        /*font-size: 2rem;
+*/
+    }
+
+    footer p {
+        /*font-size: .7rem;
+*/
+    }
+}

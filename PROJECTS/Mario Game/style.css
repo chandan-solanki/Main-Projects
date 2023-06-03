@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+
+body {
+    overflow: hidden;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 10vw;
+    width: 100vw;
+    display: flex;
+}
+
+.bg {
+    width: 300vw;
+    height: 100vh;
+    background: url(assets/bg2.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    position: absolute;
+    z-index: -111;
+    transition: all 1s ease-in-out;
+}
+
+.score {
+    font-size: 2.5rem;
+    display: flex;
+    border: 2px solid white;
+    color: whie;
+    color: white;
+    background-color: #ff0000;
+    color: white;
+    width: 18vw;
+    height: 5vh;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+    align-items: center;
+    margin-right: 1vw;
+}
+
+.logo {
+    background: url(assets/logo.png) no-repeat center;
+    background-size: 100%;
+    width: 11vw;
+    height: 10vw;
+}
+
+.gameContainer {
+    width: 100vw;
+    height: 100vh;
+    /* background: url(assets/bg2.png); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#player {
+    width: 4vw;
+    height: 7vw;
+    background: url(assets/player.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 6.5vw;
+    left: 15vw;
+    transition: all .1s ease-in-out;
+}
+
+
+#turtle {
+    width: 6vw;
+    height: 8vw;
+    background: url(assets/t1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 6.5vw;
+    left: 100vw;
+}
+
+.result {
+    font-size: 0rem;
+    transition: all .7s ease-in-out;
+}
+
+.show {
+    font-size: 3rem;
+    display: flex;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    margin-top: 20vw;
+    border: 2px solid white;
+    background-color: #E91E63;
+    border-radius: 10px;
+    text-align: center;
+    width: 22vw;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    height: 9vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.jump {
+    animation: playerJump .5s linear;
+}
+
+.move {
+    /* animation: turtuleMove 2s linear; */
+    animation: turtuleMove 3s linear infinite;
+}
+
+#btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-weight: bold;
+    font-size: 2.5rem;
+    gap: 13px;
+    display: none;
+    margin-top: 10vw;
+    margin-left: 7vw;
+}
+
+#playbutton {
+    width: 6vw;
+    cursor: pointer;
+    height: 6vw;
+    opacity: .8;
+    transition: opacity .3s ease-in-out;
+}
+
+#playbutton:hover {
+    opacity: 1;
+}
+
+@keyframes playerJump {
+
+    0% {
+        bottom: 6.5vw;
+    }
+
+    50% {
+        bottom: 30vw;
+
+    }
+
+    100% {
+        bottom: 6.5vw;
+    }
+}
+
+
+@keyframes turtuleMove {
+
+    0% {
+        left: 100vw;
+    }
+
+    /* 
+    50% {
+        left: 50vw;
+
+    } */
+
+    100% {
+        left: -40vw;
+    }
+
+}
+
+.bgmove {
+    animation: bgmove 10s linear infinite;
+}
+
+@keyframes bgmove {
+    0% {
+        left: 0vw;
+    }
+
+    50% {
+        left: -100vw;
+    }
+
+    100% {
+        left: -200vw;
+    }
+}
+
+.controls {
+    display: none;
+}

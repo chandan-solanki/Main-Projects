@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: white;
+
+}
+body ::-webkit-scrollbar{
+    display: none;
+    width: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+}
+
+:root {
+    --main-bgcolor: #2874f0;
+}
+
+/* HEADER SECTION */
+
+header {
+    height: 60px;
+    background-color: var(--main-bgcolor);
+    font-family: 'Baloo Bhai 2', cursive;
+    position: sticky;
+}
+
+
+/* LOGO SECTION */
+.logo img {
+    width: 91px;
+    padding: 0px 0px;
+    margin: 0px 11px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SEARCH SECTION */
+
+.search input {
+    display: inline-block;
+    width: 40vw;
+    border-radius: 6px;
+    text-align: left;
+    font-size: 17px;
+    padding: 0px 10px;
+    font-family: 'Baloo Bhai 2', cursive;
+
+    height: 36px;
+    outline: 0 none;
+}
+
+.searchicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 860px;
+    font-family: 'Baloo Bhai 2', cursive;
+    top: 19px;
+}
+
+.searchicon img {
+    width: 22px;
+    color: blue;
+}
+
+/* LOGIN BUTTON */
+.login button {
+    border: 1px solid white;
+    font-size: 17px;
+    margin: 0px 21px;
+    padding: 4px 40px;
+    border-radius: 4px;
+    color: var(--main-bgcolor);
+    background-color: white;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+
+/* NAV SECTION */
+nav {
+    padding: 0px 0px;
+    margin: 0px 0px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+
+
+}
+
+ul li {
+    padding: 0px 8px;
+    margin: 0px 11px;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+ul li a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Baloo Bhai 2', cursive;
+    padding: 0px 0px;
+    font-weight: bold;
+    font-size: 17px
+}
+
+ul li a:hover {
+    color: rgb(219, 232, 255);
+    font-weight: 700;
+}
+
+
+
+/* MAIN SECTION */
+
+.container {
+    height: calc(240vh - 60px - 12vh);
+    font-family: 'Baloo Bhai 2', cursive;
+    border: 4px solid red;
+    /* margin: 0px 12px; */
+}
+
+
+/* SLIDER */
+
+.slider {
+    margin: 15px 0px;
+    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid red;
+
+}
+
+.slider img {
+    /* width: 130px; */
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+/* CARDS ITEM */
+
+.card-container {
+    display: flex;
+    justify-content: start;
+    max-width: 200vh;
+    /* background-color: #2874f0; */
+    border: 2px solid green;
+    margin: 21px auto;
+    flex-direction: column;
+    font-family: 'Baloo Bhai 2', cursive;
+    background-color: #f7f7f7;
+
+
+}
+
+.card-container h2 {
+    margin-left: 22px;
+    font-family: 'Baloo Bhai 2', cursive;
+    /* background-color: white; */
+
+
+}
+
+.cards {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Baloo Bhai 2', cursive;
+    border: 2px solid blue;
+
+}
+
+.card-item img {
+    overflow: hidden;
+    font-family: 'Baloo Bhai 2', cursive;
+    width: 160px;
+    /* height: 160px; */
+    border-radius: 4px;
+    cursor: pointer;
+
+
+
+}
+
+.card-item {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+
+.card-item p {
+    line-height: 2ch;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+
+/* FOOTER SECTION */
+
+footer {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    background-color: var(--main-bgcolor);
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}

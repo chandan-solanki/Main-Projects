@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+#gamedesk {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+}
+
+#gamemobile {
+    display: none;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+}
+
+#bgmobile {
+    display: none;
+}
+
+#bgdesk {
+    width: 100vw;
+    height: 100vh;
+}
+
+#play {
+    font-family: 'Space Grotesk', sans-serif;
+
+    background: linear-gradient(to left, #6f441a, #a1944fd4);
+    font-size: 3rem;
+    position: absolute;
+    padding: 1vw 4vw;
+    top: 21vw;
+    left: 8vw;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    transition: all .1s ease-in-out;
+}
+
+#play:hover {
+    font-size: 3.2rem;
+    background: linear-gradient(to right, #6f441a, #a1944fd4);
+}
+
+.gameContainer {
+    height: 100vh;
+    width: 100vw;
+    /* background-image: url(/assets/bg.jpg); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+#board {
+    height: 85vh;
+    width: 85vh;
+    background: linear-gradient(#b4cd3d42, #B4CD3D);
+    margin-right: 10vw;
+    display: grid;
+    grid-row-start: 5;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.head {
+    background: linear-gradient(red, rgb(238, 255, 3));
+    border-radius: 10px;
+    border: 3px solid purple;
+    transition: all 1s ease-in-out;
+
+}
+
+.snake {
+    background: linear-gradient(red, purple);
+    border-radius: 20px;
+    /* border-color: white */
+    border: 2px solid white;
+    transition: all 1s ease-in-out;
+
+}
+
+.food {
+    background: linear-gradient(red, purple);
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+#score {
+    position: absolute;
+    font-size: 2rem;
+    /* font-weight: 800; */
+    top: 4vw;
+    right: 8vw;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#hiscore {
+    position: absolute;
+    font-size: 2rem;
+    /* font-weight: 800; */
+    top: 8vw;
+    right: 8vw;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#output {
+    position: absolute;
+    bottom: 0vw;
+    left: 50vw;
+    font-size: 2rem;
+    color: white;
+    display: none;
+}

@@ -1,0 +1,185 @@
+@media only screen and (max-width : 450px) {
+
+    body {
+        position: fixed;
+    }
+
+    #bgdesk {
+        display: none;
+    }
+
+    #bgmobile {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #gamedesk {
+        display: none;
+    }
+
+    #gamemobile {
+        position: absolute;
+        z-index: -5;
+        display: block;
+        height: 100vh;
+        width: 214vw;
+        left: -113%;
+    }
+
+    .bg {
+        /* background: url(/assets/bg4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; */
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #play {
+        background: linear-gradient(to left, #6f441a, #a1944f);
+        font-size: 3rem;
+        position: absolute;
+        /* padding: 1vw 4vw; */
+        padding: 0;
+        top: 47vh;
+        right: 8vw;
+        width: 82vw;
+        height: 25vw;
+        /* transition: all .1s ease-in-out; */
+    }
+
+    .gameContainer {
+        background-size: 160vh;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    #board {
+        margin-right: 0;
+        height: 100vw;
+        width: 95vw;
+        /* margin-top: 9vh; */
+    }
+
+    #hiscore {
+        top: 14vw;
+    }
+
+    .head {
+        background: linear-gradient(red, rgb(238, 255, 3));
+        border-radius: 5px;
+        border: 3px solid purple;
+        /* height: 5vw;
+        width: 5vw; */
+    }
+
+    .snake {
+        background: linear-gradient(red, purple);
+        border-radius: 7px;
+        /* height: 5vw;
+        width: 5vw; */
+    }
+
+    .food {
+        border-radius: 7px;
+        /* height: 5vw; */
+        /* width: 5vw; */
+    }
+
+}
+
+
+
+
+@media only screen and (min-width : 451px) and (max-width : 900px) {
+
+    #gamedesk {
+        /* display: none; */
+        display: block;
+    }
+
+    #gamemobile {
+        display: none;
+        /* position: absolute;
+        z-index: -5;
+        display: block;
+        height: 100vh;
+        width: 214vw;
+        left: -113%; */
+    }
+
+    #bgdesk {
+        display: none;
+    }
+
+    #bgmobile {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .bg {
+        background-size: cover;
+
+        background-position: right;
+    }
+
+    .gameContainer {
+        background-size: cover;
+        background-position: right;
+
+    }
+
+    #score {
+        right: 2vw;
+        top: 0vw;
+    }
+
+    #hiscore {
+        right: 2vw;
+        top: 6vw;
+    }
+
+    #board {
+        margin-right: 0;
+        margin-top: 15vw;
+        height: 85vh;
+        width: 93vw;
+    }
+}
+
+
+
+/* @media only screen and (min-width : 769px) and (max-width : 1180px) {
+    .bg {
+        background-size: cover;
+
+        background-position: right;
+    }
+
+
+    .gameContainer {
+        background-size: cover;
+        background-position: right;
+
+    }
+
+    #score {
+        right: 2vw;
+        top: 0vw;
+    }
+
+    #hiscore {
+        right: 2vw;
+        top: 3vw;
+    }
+
+    #board {
+        margin-right: 0;
+        margin-top: 6vw;
+        height: 85vh;
+        width: 67vw;
+    }
+
+} */

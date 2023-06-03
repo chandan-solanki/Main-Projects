@@ -1,0 +1,191 @@
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-color: black;
+        overflow: hidden;
+    }
+
+    .bg {
+        width: 300vw;
+        height: 100vh;
+        background: url(assets/bgmobile.png);
+        background-size: contain;
+        overflow: hidden;
+        position: fixed;
+    }
+
+    nav {
+        justify-content: space-between;
+        align-items: center;
+        height: 32vw;
+    }
+
+    .gameContainer {
+        width: 100vw;
+        height: 100vh;
+        /* background: url(assets/bgmobile.png); */
+        /* background-size: cover; */
+        /* background-repeat: repeat-x; */
+        /* background-position: center; */
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+
+    #turtle {
+        width: 17vw;
+        height: 17vw;
+        bottom: 32vw;
+
+        /* display: none; */
+    }
+
+    .show {
+        font-size: 1.5rem;
+        display: flex;
+        font-weight: bold;
+        position: absolute;
+        color: white;
+        margin-top: 81vw;
+        width: 47vw;
+        height: 8vh;
+        justify-content: center;
+        align-items: center;
+        margin-left: -1vw;
+    }
+
+    .score {
+        font-size: 1rem;
+        display: flex;
+        margin-right: 1vw;
+        border: 2px solid white;
+        color: whie;
+        color: white;
+        background-color: #ff0000;
+        color: white;
+        width: 38vw;
+        height: 5vh;
+        justify-content: center;
+        border-radius: 10px;
+        font-weight: bold;
+        align-items: center;
+    }
+
+    .logo {
+        background: url(assets/logo.png) no-repeat center;
+        background-size: 100%;
+        width: 37vw;
+        height: 18vw;
+        margin-top: 3vw;
+    }
+
+    #btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 81vw;
+        margin-left: 1vw;
+        color: red;
+        font-weight: bold;
+        font-size: 1rem;
+        gap: 13px;
+    }
+
+    #playbutton {
+        width: 16vw;
+        cursor: pointer;
+        height: 16vw;
+        opacity: 1.8;
+    }
+
+    #btn {
+        display: none;
+    }
+
+    #player {
+        width: 12vw;
+        height: 19vw;
+        background: url(assets/player.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        bottom: 31vw;
+        left: 6vw;
+        transition: all .1s ease-in-out;
+    }
+
+
+    .jump2 {
+        animation: playerJump2 .5s linear;
+    }
+
+    @keyframes playerJump2 {
+
+        0% {
+            bottom: 32vw;
+        }
+
+        50% {
+            bottom: 90vw;
+
+        }
+
+        100% {
+            bottom: 32vw;
+        }
+    }
+
+
+    .controls {
+        position: absolute;
+        left: 0;
+        top: 79vw;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #left {
+        background-image: url('assets/arrow-left.png');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #right {
+        background-image: url('assets/arrow-right.png');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+
+
+    .ctrlMobile {
+        width: 17vw;
+        height: 13vh;
+        margin: 0px 15px;
+        transition: all .2s ease-out;
+    }
+
+    .ctrlMobile:active {
+        width: 25vw;
+    }
+
+    .forTouch {
+        position: absolute;
+        bottom: 0px;
+        height: 51vh;
+        width: 100vw;
+        /* border: 3px solid red; */
+    }
+
+
+}

@@ -1,0 +1,88 @@
+@media screen and (max-width:1000px) {
+    body ::-webkit-scrollbar {
+        display: none;
+        width: 0px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    header {
+        height: 180px;
+    }
+
+    nav {
+        height: 180px;
+        flex-direction: column;
+    }
+
+    .search input {
+        margin: 11px auto;
+        text-align: center;
+        width: 60vw;
+        font-size: 15px;
+    }
+
+    .searchicon {
+        /* display: none; */
+        left: 285px;
+        top: 58px;
+
+    }
+
+
+    ul li {
+        padding: 0px 4px;
+        margin: 0px 8px;
+        color: white;
+    }
+
+
+    .login button {
+        margin: 0px 0px 9px 0px;
+        padding: 0px 28px;
+    }
+
+    .slider img {
+        width: 95vw;
+        border-radius: 4px;
+
+    }
+
+    .card-container h2 {
+        font-size: 17px;
+        margin-left: 5px;
+    }
+
+    .container {
+        height: calc(145vh - 180px - 44px);
+        overflow: hidden;
+    }
+
+    .cards {
+        overflow: scroll;
+        /* display: none; */
+    }
+
+    .card-item img {
+        overflow: hidden;
+        font-family: 'Baloo Bhai 2', cursive;
+        width: 25vw;
+        border-radius: 4px;
+    }
+
+    .card-item p {
+        font-size: 13px;
+
+    }
+
+
+
+    .card-item {
+        margin: 0px 4px;
+    }
+
+
+    footer {
+        height: 44px;
+    }
+}

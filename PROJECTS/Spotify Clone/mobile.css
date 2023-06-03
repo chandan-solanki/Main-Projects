@@ -1,0 +1,338 @@
+@media only screen and (max-width: 600px) {
+
+    #navbar-pc {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        position: fixed;
+        left: -159px;
+        top: 0px;
+        height: 100%;
+        width: 38%;
+        background-color: #131313;
+        align-items: center;
+        color: white;
+        z-index: 2;
+        border-radius: 0px;
+        transition: all .2s ease-out;
+    }
+
+    .close {
+        display: block;
+        width: 35px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 76px;
+        margin-top: 6px;
+    }
+
+    #closepng {
+        height: 22px;
+        filter: invert(1);
+    }
+
+    #menu-bar {
+        display: block;
+        height: 22px;
+        filter: invert(1);
+        margin-left: 14px;
+
+    }
+
+    main::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        height: 100vh;
+        position: relative;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .logo {
+        margin-top: 24px;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    #navbar-mobile {
+        /* display: flex; */
+        gap: 30px;
+        flex-direction: column;
+        position: sticky;
+        left: -150px;
+        /* top: 614px; */
+        height: 8vh;
+        width: 100vw;
+        background-color: #000000;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        z-index: 115;
+        border-radius: 0px;
+        bottom: 0px;
+    }
+
+    main {
+        position: absolute;
+        top: -9px;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        left: 0px;
+        border-radius: 0px;
+    }
+
+    .userDiv {
+        width: 68px;
+        height: 30px;
+    }
+
+    .userDiv span {
+        display: none;
+    }
+
+    .right {
+        display: flex;
+        gap: 10px;
+        margin: 0px 14px;
+        min-height: 40px;
+        align-items: center;
+        width: 220px;
+        justify-content: end;
+    }
+
+    #upgrade {
+        display: none;
+    }
+
+    nav {
+        left: 0px;
+        width: 100%;
+        height: 58px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0px;
+    }
+
+    .navigation-item {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        /* width: 100%; */
+        margin-top: 45px;
+    }
+
+    .main-poster {
+        width: 50px;
+        border-radius: 10px;
+    }
+
+    header {
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap: 19px;
+    }
+
+    header h1 {
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+
+    .container-songs h2 {
+        margin-left: 1px;
+        margin-top: 14px;
+    }
+
+    .headeritem {
+        display: flex;
+        gap: 17px;
+        background: #b3b3b32e;
+        align-items: center;
+        justify-content: start;
+        width: 47%;
+        border-radius: 9px;
+        transition: all .2s ease-out;
+    }
+
+    .container-headersong {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    .playbutton {
+        display: flex;
+        margin-left: 0;
+        height: 32px;
+        width: 32px;
+        background-size: 15px;
+    }
+
+    .headeritem span {
+        width: 35%;
+        font-weight: 800;
+        font-size: .8rem;
+    }
+
+    .row-songs {
+        box-sizing: border-box;
+        overflow: hidden;
+        overflow: scroll;
+        gap: 23px;
+        justify-content: stretch;
+        height: 207px;
+    }
+
+    .row-item {
+        height: auto;
+        width: auto;
+    }
+
+    .background-img {
+        /* background-image: url(assets/asset\ 13.jpeg); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 113px;
+        width: 105px;
+        border-radius: 15px;
+    }
+
+    .container-songs {
+        padding: 19px 10px;
+        height: auto;
+        gap: 0px;
+    }
+
+    .progress-div{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100vw;
+    }
+
+    .container-play-button {
+        display: flex;
+        height: 32px;
+        width: 32px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 35px;
+        background-color: #1ed760;
+        background-size: 18px;
+        right: 8px;
+        top: 81px;
+    }
+
+    .song-name {
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #handleMasterSongForMobile {
+        position: sticky;
+        left: 0px;
+        bottom: -2px;
+        height: 68px;
+        z-index: 4;
+        background-color: #000000;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #handleMasterSongForPC {
+        display: none;
+    }
+
+    .masterBtn {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        width: 80%;
+    }
+
+    #masterPosterName {
+        text-align: left;
+        width: 100%;
+        margin-left: 14px;
+        font-size: 0.9rem;
+    }
+
+    .volume-icon {
+        height: 23px;
+        width: 43px;
+        background-image: url(assets/asset\ 138.svg);
+        background-position: center;
+        background-size: cover;
+        filter: invert(1);
+        transition: all .3s ease-in;
+        margin-right: 9px;
+        opacity: .5;
+    }
+
+    .volume-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 26%;
+        margin-right: 5px;
+        display: none;
+    }
+
+    .masterControl {
+        margin-right: 4%;
+    }
+
+    .masterPoster {
+        width: 51%;
+        height: 73%;
+        justify-content: space-between;
+        box-sizing: border-box;
+        font-weight: 600;
+        align-items: center;
+        margin-left: 10px;
+        transition: all .2s ease-in-out;
+    }
+
+    #masterImage {
+        width: auto;
+        height: 75%;
+        border-radius: 7px;
+        transition: all .2s ease-in-out;
+    }
+
+    .row-songs::-webkit-scrollbar {
+        display: none;
+    }
+
+    main::-webkit-scrollbar {
+        display: none;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+}
