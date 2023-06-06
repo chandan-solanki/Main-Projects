@@ -63,7 +63,7 @@ nav {
   border-top-right-radius: 10px;
   z-index: 10;
   background-image: linear-gradient(#4820b0, #4920b079);
-  transition: background-color 1s ease-in-out;
+  transition: background-color .6s ease-in-out;
 }
 
 .toggle-color {
@@ -449,7 +449,7 @@ header h1 {
   border-radius: 35px;
   background-color: #1ed760;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  background-image: url('assets/asset 132.svg');
+  background-image: url('/assets/asset 132.svg');
   background-position: center;
   background-size: 20px;
   background-repeat: no-repeat;
@@ -470,16 +470,16 @@ header h1 {
 
 
 .play-button-play {
-  background-image: url('assets/asset 132.svg');
+  background-image: url('/assets/asset 132.svg');
 }
 
 .play-button-toggle {
-  background-image: url('assets/pause.svg');
+  background-image: url('/assets/pause.svg');
 }
 
 
 .play-button-pause {
-  background-image: url('assets/pause.svg');
+  background-image: url('/assets/pause.svg');
   /* background-image: url('assets/.svg'); */
 }
 
@@ -552,7 +552,7 @@ header h1 {
   border-radius: 35px;
   background-color: #1ed760;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  background-image: url(assets/asset\ 132.svg);
+  background-image: url(/assets/asset\ 132.svg);
   /* background-image: url(assets/snap.jfif); */
   background-position: center;
   background-size: 20px;
@@ -572,11 +572,11 @@ header h1 {
 
 
 .container-button-play {
-  background-image: url('assets/asset 132.svg');
+  background-image: url('/assets/asset 132.svg');
 }
 
 .container-button-pause {
-  background-image: url('assets/pause.svg');
+  background-image: url('/assets/pause.svg');
 }
 
 
@@ -623,7 +623,7 @@ header h1 {
 }
 
 .previous-btn {
-  background-image: url(assets/asset\ 131.svg);
+  background-image: url(/assets/asset\ 131.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -640,7 +640,7 @@ header h1 {
 }
 
 .master-play {
-  background-image: url(assets/asset\ 132.svg);
+  background-image: url(/assets/asset\ 132.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -652,7 +652,7 @@ header h1 {
 }
 
 .master-play-toggle {
-  background-image: url(assets/pause.svg);
+  background-image: url(/assets/pause.svg);
 }
 
 .master-play:hover {
@@ -661,7 +661,7 @@ header h1 {
 }
 
 .next-btn {
-  background-image: url(assets/asset\ 133.svg);
+  background-image: url(/assets/asset\ 133.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -678,7 +678,7 @@ header h1 {
 }
 
 .master-toogle {
-  background-image: url(assets/pause.svg);
+  background-image: url(/assets/pause.svg);
 
 }
 
@@ -815,7 +815,7 @@ header h1 {
 .volume-icon {
   height: 14px;
   width: 19px;
-  background-image: url('assets/asset\ 138.svg');
+  background-image: url('/assets/asset\ 138.svg');
   background-position: center;
   background-size: cover;
   filter: invert(1);
@@ -898,4 +898,36 @@ header h1 {
   border-radius: 50%;
   border: none;
   transition: .2s ease-in-out;
+}
+
+
+
+.bgchange{
+  background: #131313;
+}
+
+
+
+
+/* --- STYLE FOR WEB SCROOLL ------- */
+
+/* width */
+::-webkit-scrollbar {
+  display: none;
+  width: 8px;   /* vertical scrollbar width */
+  height: 12px; /* horizontal scrollbar height */
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

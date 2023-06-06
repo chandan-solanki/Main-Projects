@@ -5,14 +5,14 @@
         gap: 30px;
         flex-direction: column;
         position: fixed;
-        left: -159px;
+        left: -50%;
         top: 0px;
         height: 100%;
         width: 38%;
         background-color: #131313;
         align-items: center;
         color: white;
-        z-index: 2;
+        z-index: 100;
         border-radius: 0px;
         transition: all .2s ease-out;
     }
@@ -87,6 +87,7 @@
         z-index: 0;
         left: 0px;
         border-radius: 0px;
+        margin-top: 1.9%;
     }
 
     .userDiv {
@@ -138,7 +139,7 @@
     }
 
     header {
-        height: 30vh;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: start;
@@ -158,11 +159,11 @@
 
     .headeritem {
         display: flex;
-        gap: 17px;
+        gap: 10px;
         background: #b3b3b32e;
         align-items: center;
         justify-content: start;
-        width: 47%;
+        width: 45%;
         border-radius: 9px;
         transition: all .2s ease-out;
     }
@@ -240,12 +241,12 @@
         border-radius: 35px;
         background-color: #1ed760;
         background-size: 18px;
-        right: 8px;
-        top: 81px;
+        right: 5px;
+    top: 78px;
     }
 
     .song-name {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 1rem;
         text-align: center;
     }

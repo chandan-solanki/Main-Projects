@@ -51,7 +51,7 @@ const next_btn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 const handleMasterSong = document.getElementById("handleMasterSongForMobile");
 
-let x = window.matchMedia("(max-width: 600px)")
+let x = window.matchMedia("(max-width: 895px)")
 x.addEventListener("change", colorChange)
 //for color change function
 function colorChange(songIndex) {
@@ -542,30 +542,21 @@ const menubar = document.getElementById("menu-bar");
 // console.log(menubar)
 
 menubar.addEventListener("click", () => {
-  console.log("menu bar ")
+  // console.log("menu bar ")
   document.getElementById("navbar-pc").style.left = "0px";
 })
 
 closediv.addEventListener('click', () => {
-  console.log("click close")
+  // console.log("click close")
 
-  document.getElementById("navbar-pc").style.left = "-160px";
+  document.getElementById("navbar-pc").style.left = "-50%";
 })
 
 
 
-// -----------------------------------------------------
+// --------------------- for scroll change the color ----------------
 
-//THIS SECTION FOR COLOR CHANGING
 
-// const pbtn = document.querySelectorAll(".playbutton");
-// // console.log(pbtn)
-
-// pbtn.forEach((btn)=>{
-//   btn.addEventListener("click",()=>{
-//     console.log("btn click ")
-
-//   })
-// })
-
-// background-image: linear-gradient(#4820b0, #4920b079);
+window.addEventListener('scroll', (e) => {
+  document.querySelector('nav').classList.toggle('bgchange', window.scrollY > 100)
+})
