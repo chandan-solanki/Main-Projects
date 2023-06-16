@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <div class="logo">
+            <img src="/logo.png" alt="codingworld">
+            <span>Live Code Editor</span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="container-input">
+            <div class="navigation">
+                <ul>
+                    <li class="nav-link show-nav" id="html-nav"><i class="fa-brands fa-html5"></i>HTML</li>
+                    <li class="nav-link" id="css-nav"><i class="fa-brands fa-css3-alt"></i>CSS</li>
+                    <li class="nav-link" id="js-nav"><i class="fa-brands fa-js"></i>JS</li>
+                </ul>
+            </div>
+            <div id="" class="html code-container show">
+                <label id="html-lbl" class="lbl active" for="html-input"><i class="fa-brands fa-html5"></i>HTML</label>
+                <textarea class="input" id="html-input"></textarea>
+            </div>
+            <div id="" class="css code-container">
+                <label id="css-lbl" class="lbl " for="css-input"><i class="fa-brands fa-css3-alt"></i>CSS</label>
+                <textarea class="input" id="css-input"></textarea>
+            </div>
+            <div id="" class="js code-container">
+                <label id="js-lbl" class="lbl  " for="js-input"><i class="fa-brands fa-js"></i>JS</label>
+                <textarea class="input" id="js-input"></textarea>
+            </div>
+        </div>
+
+        <div class="container-output">
+            <iframe id="output" frameborder="0"></iframe>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/da348fb057.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
