@@ -8,7 +8,8 @@ if (mediaQuery.matches) {
         { name: "Personal Portfolio", path: "assets/protfolioMobile.png" },
         { name: "Tic Tac Toe", path: "assets/ticTacToeMobile.png" },
         { name: "Snake Game", path: "assets/snakeMobile.png" },
-        { name: "Car Move", path: "assets/carMobile.png" }
+        { name: "Car Move", path: "assets/carMobile.png" },
+        { name: "Live Code Editor", path: "assets/livecodeeditormobile.png" }
     ]
 
     const containItem = document.querySelectorAll('.containe-item');
@@ -26,6 +27,9 @@ if (mediaQuery.matches) {
 }
 
 
+
+
+// this media query for pc or big screen and laptop
 const mediaQuery1 = window.matchMedia('(min-width: 795px)')
 
 if (mediaQuery1.matches) {
@@ -36,7 +40,8 @@ if (mediaQuery1.matches) {
         { name: "Personal Portfolio", path: "assets/portfolio.png" },
         { name: "Tic Tac Toe", path: "assets/tic-tac-toe.png" },
         { name: "Snake Game", path: "assets/snakeGame.png" },
-        { name: "Car Move", path: "assets/carMove.png" }
+        { name: "Car Move", path: "assets/carMove.png" },
+        { name: "Live Code Editor", path: "assets/livecodeeditorpc.png" }
     ]
 
     const containItem = document.querySelectorAll('.containe-item');
@@ -50,8 +55,6 @@ if (mediaQuery1.matches) {
         el.childNodes[1].textContent = `${projectDetails[index].name}`
     })
 }
-
-
 
 
 
@@ -98,9 +101,7 @@ window.onscroll = (() => {
 
 
     let header = document.getElementById('header');
-    // console.log(header)
 
-    // console.log("scrool yes")
     header.classList.toggle('bgchange', window.scrollY > 100)
 
     //when click or scroll then remove class of menu bar and navbar
