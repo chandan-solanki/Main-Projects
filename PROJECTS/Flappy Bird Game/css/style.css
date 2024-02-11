@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.scorediv {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+
+}
+
+.overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: +2;
+    background-color: #00000073;
+}
+
+.active-overlay {
+    width: 100vw;
+}
+
+
+
+/* ------------- MAIN GAME CONTAINER ------------ */
+.game-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/assets/background-day.png');
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+
+.bird {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 5%;
+    /* border: 2px solid red; */
+    display: flex;
+    border-radius: 100%;
+    color: white;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    position: absolute;
+    background-image: url('/assets/bluebird-downflap.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(20deg);
+    transition: transform .2s ease-in;
+}
+
+
+.obstacle {
+    min-width: 65px;
+    /* height: auto; */
+    /* z-index: 100; */
+    position: absolute;
+    background-image: url('/assets/pipe-red.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: green; */
+}
+
+.obstacleUp {
+    min-width: 65px;
+    /* z-index: 100; */
+    position: absolute;
+    transform: rotate(180deg);
+    background-image: url('/assets/pipe-red.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: green; */
+}
+
+
+
+/* ------BASE STYLE OF GAME ---------- */
+.base {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: +1;
+    height: 10vh;
+    width: 100%;
+    background-image: url('/assets/base.png');
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+
+.gameOverMsg {
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 200;
+    gap: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    height: auto;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+
+.show-gameover {
+    /* display: block; */
+    visibility: visible;
+}
+
+
+.high-score {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    font-weight: 800;
+    color: white;
+    font-size: 2.1rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    z-index: +1;
+}
+
+.high-score span {
+    font-weight: 800;
+    color: red;
+}

@@ -1,0 +1,20 @@
+@media screen and (max-width : 560px) {
+    body {
+        background: black;
+    }
+
+    .gameOverMsg img{
+        width: 50vw;
+    }
+    .gameOverMsg {
+        width: auto;
+    }
+
+    .high-score {
+        font-size: 1.2rem;
+    }
+
+    .game-container{
+        background-size: cover;
+    }
+}

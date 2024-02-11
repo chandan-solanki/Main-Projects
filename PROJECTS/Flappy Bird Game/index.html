@@ -5,15 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flappy Bird</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+
+    <div class="gameOverMsg">
+        <img src="/assets/gameover.png" alt="">
+        <p class="scorediv">Score : 00</p>
+        <img src="/assets/message.png" alt="">
+    </div>
+
     <div class="game-container">
+        <div class="high-score">High Score : <span>00</span></div>
         <div class="bird"></div>
         <!-- <div class="obstacle">
         </div> -->
         <div class="base"></div>
+    </div>
+
+    <div class="overlay">
+
     </div>
 
     <script src="app.js"></script>
