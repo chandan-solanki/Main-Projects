@@ -20,9 +20,6 @@ let point = new Audio('/assets/point.wav');
 let die = new Audio('/assets/die.wav');
 
 
-
-
-
 //---------- GET THE HIGH SCORE ON THE LOCALSTORAGE AND DIPLAY --------
 let high_score = JSON.parse(localStorage.getItem("highscore"));
 if (high_score > 0) {
@@ -30,8 +27,6 @@ if (high_score > 0) {
 }
 
 gameOverMsg.addEventListener("click", restartGame);
-
-
 
 
 

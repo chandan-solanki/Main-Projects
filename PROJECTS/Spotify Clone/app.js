@@ -4,22 +4,22 @@
 let songIndex = 0;
 
 const songsInfo = [
-  { "songName": "Vardan", "coverPath": "assets/vardan.jfif", "filePath": "songs/0.mp3" },
-  { "songName": "Sulthan", "coverPath": "assets/asset\ 87.jpeg", "filePath": "songs/1.mp3" },
-  { "songName": "Chand Baaliyan", "coverPath": "assets/asset\ 14.jpeg", "filePath": "songs/2.mp3" },
-  { "songName": "Monster KGF", "coverPath": "assets/asset\ 15.jpeg", "filePath": "songs/3.mp3" },
-  { "songName": "Deadwood", "coverPath": "assets/asset\ 4.jpeg", "filePath": "songs/4.mp3" },
-  { "songName": "Yaaro Ne", "coverPath": "assets/asset\ 33.jpeg", "filePath": "songs/5.mp3" },
-  { "songName": "Snap", "coverPath": "assets/snap.jfif", "filePath": "songs/6.mp3" },
-  { "songName": "All Time Low", "coverPath": "assets/alltimelow.jfif", "filePath": "songs/7.mp3" },
-  { "songName": "Naruto Theme", "coverPath": "assets/naruto.jfif", "filePath": "songs/8.mp3" },
-  { "songName": "Enemy Arcane", "coverPath": "assets/enemy.jfif", "filePath": "songs/9.mp3" },
-  { "songName": "Love Of Shap of You", "coverPath": "assets/loveshap.jpg", "filePath": "songs/10.mp3" },
-  { "songName": "Hymen of the Weekened", "coverPath": "assets/hymen.jfif", "filePath": "songs/11.mp3" },
-  { "songName": "Faded", "coverPath": "assets/faded.jfif", "filePath": "songs/12.mp3" },
-  { "songName": "Girls like you do", "coverPath": "assets/girlslike.jfif", "filePath": "songs/13.mp3" },
-  { "songName": "Play Date", "coverPath": "assets/playdate.jpg", "filePath": "songs/14.mp3" },
-  { "songName": "Unstoppable", "coverPath": "assets/unstoppable.jpg", "filePath": "songs/15.mp3" },
+  { "id": "0", "songName": "Vardan", "coverPath": "assets/vardan.jfif", "filePath": "songs/0.mp3" },
+  { "id": "1", "songName": "Sulthan", "coverPath": "assets/asset\ 87.jpeg", "filePath": "songs/1.mp3" },
+  { "id": "2", "songName": "Chand Baaliyan", "coverPath": "assets/asset\ 14.jpeg", "filePath": "songs/2.mp3" },
+  { "id": "3", "songName": "Monster KGF", "coverPath": "assets/asset\ 15.jpeg", "filePath": "songs/3.mp3" },
+  { "id": "4", "songName": "Deadwood", "coverPath": "assets/asset\ 4.jpeg", "filePath": "songs/4.mp3" },
+  { "id": "5", "songName": "Yaaro Ne", "coverPath": "assets/asset\ 33.jpeg", "filePath": "songs/5.mp3" },
+  { "id": "6", "songName": "Snap", "coverPath": "assets/snap.jfif", "filePath": "songs/6.mp3" },
+  { "id": "7", "songName": "All Time Low", "coverPath": "assets/alltimelow.jfif", "filePath": "songs/7.mp3" },
+  { "id": "8", "songName": "Naruto Theme", "coverPath": "assets/naruto.jfif", "filePath": "songs/8.mp3" },
+  { "id": "9", "songName": "Enemy Arcane", "coverPath": "assets/enemy.jfif", "filePath": "songs/9.mp3" },
+  { "id": "10", "songName": "Love Of Shap of You", "coverPath": "assets/loveshap.jpg", "filePath": "songs/10.mp3" },
+  { "id": "11", "songName": "Hymen of the Weekened", "coverPath": "assets/hymen.jfif", "filePath": "songs/11.mp3" },
+  { "id": "12", "songName": "Faded", "coverPath": "assets/faded.jfif", "filePath": "songs/12.mp3" },
+  { "id": "13", "songName": "Girls like you do", "coverPath": "assets/girlslike.jfif", "filePath": "songs/13.mp3" },
+  { "id": "14", "songName": "Play Date", "coverPath": "assets/playdate.jpg", "filePath": "songs/14.mp3" },
+  { "id": "15", "songName": "Unstoppable", "coverPath": "assets/unstoppable.jpg", "filePath": "songs/15.mp3" },
 ]
 
 const bgColors = [
@@ -42,21 +42,37 @@ const bgColors = [
 ]
 
 
-
+let songId = 0;
 
 // VARAIBLES FOR DOM  OR MASTER CONTROLS 
 const masterPlay = document.getElementById("masterPlay")
-const audioObj = new Audio(`${songsInfo[songIndex].filePath}`);
 const next_btn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 const handleMasterSong = document.getElementById("handleMasterSongForMobile");
+const container_headersong = document.querySelector(".container-headersong");
+const container_row_song1 = document.querySelector("#container-row-songs-1");
+const container_row_song2 = document.querySelector("#container-row-songs-2");
+
+
+const endTimeDiv = document.querySelector(".end-time-song");
+const startTimeDiv = document.querySelector(".start-time-song");
+
+
+const search_sectionBtn = document.getElementById("search");
+const search_sectionDiv = document.getElementById("search-section");
+
+console.log(search_sectionDiv)
+
+const audioObj = new Audio(`${songsInfo[songId].filePath}`);
+
 
 let x = window.matchMedia("(max-width: 895px)")
 x.addEventListener("change", colorChange)
-//for color change function
-function colorChange(songIndex) {
+
+// for color change function
+function colorChange(songId) {
   if (x.matches) {
-    handleMasterSong.style.backgroundImage = `${bgColors[songIndex].color}`
+    handleMasterSong.style.backgroundImage = `${bgColors[songId].color}`
     console.log("matches")
   } else {
     handleMasterSong.style.backgroundColor = `#000000`
@@ -65,50 +81,71 @@ function colorChange(songIndex) {
 
 colorChange(songIndex)
 
-let displayImgIndex = 0
-Array.from(document.querySelectorAll(".main-poster")).forEach((img) => {
-  img.src = `${songsInfo[displayImgIndex++].coverPath}`
-  // console.log(displayImgIndex)
-})
 
-//dispaly the all cover in the DOM
-document.querySelectorAll('.background-img').forEach((element) => {
-  element.style.backgroundImage = `url('${songsInfo[displayImgIndex++].coverPath}')`;
+
+window.addEventListener("load", () => {
+  bootUpApp();
 })
 
 
-displayNameIndex = 0
-// display the name of song in the header song name  DOM
-Array.from(document.querySelectorAll(".songHeadName")).forEach((element) => {
-  element.textContent = `${songsInfo[displayNameIndex++].songName}`
-  // console.log(displayNameIndex)
-})
+function bootUpApp() {
 
-// display the name of song in the container song DOM
-document.querySelectorAll('.song-name').forEach((element) => {
-  element.textContent = `${songsInfo[displayNameIndex++].songName}`
-})
+  generateDomOfHeaderItems();
+  generateMainContainerSongs();
 
+}
 
+function generateMainContainerSongs() {
+  let eldiv = "";
+  for (let i = 6; i < 11; i++) {
+    // console.log(songsInfo[i]);
+    const item = `<div id="" class="row-item">
+    <div class="background-img"><img src="${songsInfo[i].coverPath}" alt="song-poster"></div>
+    <div id="${songsInfo[i].id}" class="container-play-button" data-song-id='${songsInfo[i].id}'></div>
+    <div class="song-name">${songsInfo[i].songName}</div>
+  </div>`;
+    eldiv += item;
+  }
 
+  container_row_song1.innerHTML = eldiv;
 
+  eldiv = "";
 
-const headeritem = document.querySelectorAll(".headeritem");
-const headeritemarr = Array.from(headeritem)
+  for (let i = 11; i < songsInfo.length; i++) {
+    // console.log(songsInfo[i]);
+    const item = `<div id="" class="row-item">
+    <div class="background-img"><img src="${songsInfo[i].coverPath}" alt="song-poster"></div>
+    <div id="${songsInfo[i].id}" class="container-play-button" data-song-id='${songsInfo[i].id}'></div>
+    <div class="song-name">${songsInfo[i].songName}</div>
+  </div>`;
+    eldiv += item;
+  }
 
+  container_row_song2.innerHTML = eldiv;
 
+  listenContainerSongPlayButton();
 
-//display the playbutton 
-const displayPlaybtn = (() => {
+}
 
-  headeritemarr.forEach((item) => {
-    item.addEventListener("mouseover", () => {
-      const plbutton = item.childNodes[5];
-      plbutton.style.display = "flex"
-    })
-  })
+function generateDomOfHeaderItems() {
+  let eldiv = "";
+  for (let i = 0; i < 6; i++) {
+    // console.log(songsInfo[i]);
+    const item = `<div class="headeritem">
+      <img class="main-poster" src="${songsInfo[i].coverPath}" alt="boost">
+      <span class="songHeadName">${songsInfo[i].songName}</span>
+      <div id= "${songsInfo[i].id}" class="playbutton" data-song-id ="${songsInfo[i].id}">
+        <!-- <img src="assets/asset 132.svg" alt="play-icon"> -->
+      </div>
+    </div>`;
+    eldiv += item;
+  }
 
-})
+  container_headersong.innerHTML = eldiv;
+
+  listenPlayOrPauseHeaderButton();
+}
+
 
 
 //this function for other side hover then playbutton diseaper
@@ -158,28 +195,34 @@ function hoverButtonsDefault() {
 function masterPlayfun(audioObj) {
 
   masterPlay.addEventListener('click', () => {
-    console.log("master play")
+    console.log("master function")
     // masterPlay.classList.toggle("master-play-toggle");
+
     if (audioObj.paused === true) {
+      console.log("master play")
       audioObj.play();
+      console.log(document.getElementById(`${songId}`))
       masterPlay.classList.add("master-play-toggle");
+      document.getElementById(`${songId}`).classList.add("play-button-pause");
     } else {
       // hoverButtons(songIndex)
+      console.log("master pause")
       audioObj.pause();
+      console.log(document.getElementById(`${songId}`))
       masterPlay.classList.remove("master-play-toggle");
+      document.getElementById(`${songId}`).classList.remove("play-button-pause");
     }
-    afterPlay(songIndex);
-    afterContainerPlay(songIndex)
+
     masterCoverChange()
     // showMaster()
   })
 }
 
 function showMaster() {
-  const headerBtn = document.getElementById(`${songIndex}`);
+  const headerBtn = document.getElementById(`${songId}`);
   console.log(headerBtn)
   headerBtn.style.display = "flex"
-  hoverButtons(songIndex)
+  hoverButtons(songId)
 }
 
 // displayPlaybtn()
@@ -188,15 +231,15 @@ masterPlayfun(audioObj)
 
 //NEXT BUTTON FOR LISTNER
 next_btn.addEventListener('click', () => {
-  if (songIndex >= 15) {
-    songIndex = -1;
+  if (songId >= songsInfo.length - 1) {
+    songId = -1;
   }
-  songIndex++;
-  colorChange(songIndex)
-  // handleMasterSong.style.backgroundImage = `${bgColors[songIndex].color}`
-  console.log({ songIndex })
-  audioObj.src = `${songsInfo[songIndex].filePath}`
-  const MasterControl = document.getElementById(`${songIndex}`);
+  songId++;
+  colorChange(songId)
+  // handleMasterSong.style.backgroundImage = `${bgColors[songId].color}`
+  console.log({ songId })
+  audioObj.src = `${songsInfo[songId].filePath}`
+  const MasterControl = document.getElementById(`${songId}`);
   if (audioObj.paused === true) {
     masterPlay.classList.add("master-play-toggle");
     // MasterControl.classList.add('container-button-pause');
@@ -207,20 +250,20 @@ next_btn.addEventListener('click', () => {
   }
 
   masterCoverChange()
-  afterPlay(songIndex)
-  afterContainerPlay(songIndex)
+  afterContainerPlay()
+  afterPlay()
 })
 
 //PREVIOUS BUTTON FOR LISTNER 
 prevBtn.addEventListener('click', () => {
-  if (songIndex <= 0) {
-    songIndex = 16;
+  if (songId <= 0) {
+    songId = songsInfo.length;
   }
-  songIndex--;
-  colorChange(songIndex)
-  console.log({ songIndex })
-  audioObj.src = `${songsInfo[songIndex].filePath}`
-  const MasterControl = document.getElementById(`${songIndex}`);
+  songId--;
+  colorChange(songId)
+  console.log({ songId })
+  audioObj.src = `${songsInfo[songId].filePath}`;
+  const MasterControl = document.getElementById(`${songId}`);
   if (audioObj.paused === true) {
     masterPlay.classList.add("master-play-toggle");
     // MasterControl.classList.add('container-button-pause');
@@ -230,6 +273,9 @@ prevBtn.addEventListener('click', () => {
     audioObj.pause();
   }
   masterCoverChange()
+  afterContainerPlay()
+  afterPlay()
+
 })
 
 
@@ -243,14 +289,9 @@ function afterMasterControl(passid) {
 
 
 function masterCoverChange() {
-  document.getElementById("masterImage").src = `${songsInfo[songIndex].coverPath}`
-  document.getElementById("masterPosterName").textContent = `${songsInfo[songIndex].songName}`
+  document.getElementById("masterImage").src = `${songsInfo[songId].coverPath}`
+  document.getElementById("masterPosterName").textContent = `${songsInfo[songId].songName}`
 }
-
-
-
-
-
 
 
 
@@ -259,70 +300,56 @@ function masterCoverChange() {
 
 
 //THIS SECTION FOR CONTAINER PLAY OR PAUSE SONGS 
-const arrayBtn = document.querySelectorAll(".container-play-button");
-Array.from(arrayBtn);
-
-
 //LISTNER FOR ALL BUTTON IN CONTAINER PLAY OR PAUSE BUTTONS
-arrayBtn.forEach((element) => {
 
-  element.addEventListener("click", (e) => {
+function listenContainerSongPlayButton() {
+
+  const arrayBtn = document.querySelectorAll(".container-play-button");
+
+  arrayBtn.forEach((element) => {
+
+    element.addEventListener("click", (e) => {
+
+      songId = e.target.id;
+      colorChange(songId)
+      audioObj.src = `${songsInfo[songId].filePath}`;
 
 
-    // console.log(e.target)
-
-    // console.log(audioObj.pa)
-    songIndex = e.target.id
-    colorChange(songIndex)
-    if (audioObj.paused === true) {
-      console.log("play song ..")
-      audioObj.src = `${songsInfo[songIndex].filePath}`;
-    } else {
-      console.log("pause song ..")
-      // audioObj.pause();
-      e.target.classList.add("container-button-pause");
-    }
-    afterPlay(-10000);
-    afterContainerPlay(e.target.id)
-    playORpause(audioObj)
-    masterCoverChange()
+      afterPlay();
+      afterContainerPlay();
+      playORpause();
+      masterCoverChange();
+    })
   })
-})
+
+}
 
 
 
 //THIS FUNCTION FOR SAME PLAY OR PAUSE IN THE MASTER CONTROLS 
-function playORpause(audioObj) {
+function playORpause() {
   console.log("master play")
-  masterPlay.classList.toggle("master-play-toggle");
   if (audioObj.paused === true) {
     audioObj.play();
+    document.getElementById(`${songId}`).classList.add("play-button-pause");
+    masterPlay.classList.add("master-play-toggle");
   } else {
     audioObj.pause();
     masterPlay.classList.remove("master-play-toggle");
-  }
+    document.getElementById(`${songId}`).classList.remove("play-button-pause");
 
+  }
 }
 
 
 //AFTER PLAY OR PAUSE BUTTON THIS FUNCTION DEFINE WHICH BUTTON AND OTHE AUTO REMOVE PAUSE CLASS 
-function afterContainerPlay(playbtnID) {
+function afterContainerPlay() {
+  const arrayBtn = document.querySelectorAll(".container-play-button");
   arrayBtn.forEach((element) => {
-    if (element.id === playbtnID) {
-      // console.log("afeteContainerPlay Id " + playbtn.id);
-      element.classList.toggle("container-button-pause");
-      // element.classList.add("container-button-pause");
-
-    } else {
-      element.classList.remove("container-button-pause");
-    }
+    element.classList.remove("play-button-pause");
   })
+
 }
-
-
-
-
-
 
 
 
@@ -331,56 +358,59 @@ function afterContainerPlay(playbtnID) {
 
 //show the playbutton in header songs container and control when button pause or play
 
-
-
 //LISTNER FOR PLAY HEADER BUTTON TO PLAY OR PAUSE SONGS
-headeritem.forEach((item, i) => {
-  // console.log(item.childNodes[5])
-  const playButton = item.childNodes[5];
+function listenPlayOrPauseHeaderButton() {
 
-  playButton.addEventListener("click", () => {
+  const headeritem = document.querySelectorAll(".headeritem");
+  console.log(headeritem);
 
-    console.log(playButton.id)
-    songIndex = playButton.id
-    colorChange(songIndex)
-    if (audioObj.paused === true) {
-      audioObj.src = `${songsInfo[songIndex].filePath}`
-    } else {
-      console.log("pause song ..")
-      playButton.classList.add("play-button-pause");
-      // hoverButtonsDefault();
-    }
-    afterContainerPlay(-1000)
-    afterPlay(playButton.id);
-    playORpause(audioObj)
-    masterCoverChange()
+  headeritem.forEach((item, i) => {
+    // console.log(item.childNodes[5])
+    const playButton = item.childNodes[5];
+
+    playButton.addEventListener("click", () => {
+
+      songId = playButton.getAttribute('data-song-id');
+
+      console.log({ songId }); // "myValue"
+
+      colorChange(songId);
+
+      audioObj.src = `${songsInfo[songId].filePath}`;
+
+
+      afterContainerPlay()
+      afterPlay();
+      playORpause()
+      masterCoverChange()
+    })
   })
-})
 
+}
 
 
 //this function use for play por pause button display in the element 
-function afterPlay(currentButtonID) {
+function afterPlay() {
   const playButtons = document.querySelectorAll('.playbutton');
+
   playButtons.forEach((playButton) => {
     // console.log("CUREENT BUTTON : ", currentButton.id, currentButton.id === playButton.id)
-    if (currentButtonID === playButton.id) {
-      // console.log("aftePlayHeaderSong Id : " + playButton.id);
-      playButton.classList.toggle('play-button-pause');
+    playButton.classList.remove('play-button-pause');
+  });
 
-    } else {
-      playButton.classList.remove('play-button-pause');
-    }
-  })
+  document.getElementById(`${songId}`).classList.add("play-button-pause");
+
 }
 
 
 
 // -------------------------------------------------------------------------
-// PROGRESS  UPDATE SECTION
+// PROGRESS and TIME UPDATE SECTION
 
 const progressbar = document.getElementById("progressbar");
 // let percProgress = 0
+let timeOfsong = "";
+
 audioObj.addEventListener("timeupdate", () => {
   //   console.log("update")
   // let percProgress = 0
@@ -388,12 +418,41 @@ audioObj.addEventListener("timeupdate", () => {
   // console.log({ percProgress })
   progressbar.value = percProgress;
 
+  // ------------ for end time song -----------
+  const minutes = Math.floor(audioObj.duration / 60); // Get the whole minutes
+  const remainingSeconds = audioObj.duration % 60; // Get the remaining seconds
+  if (remainingSeconds <= 9) {
+    timeOfsong = `${minutes}:0${remainingSeconds.toFixed(0)}`;
+  } else {
+    timeOfsong = `${minutes}:${remainingSeconds.toFixed(0)}`;
+  }
+  // console.log({ timeOfsong })
+
+  if (percProgress >= 0) {
+    endTimeDiv.innerHTML = `${timeOfsong}`
+  }
+
+  // ------ for start Time of Song ----------
+  let startMinutes = Math.floor(audioObj.currentTime / 60);
+  let startSeconds = audioObj.currentTime % 60;
+  let startTime = "";
+
+  if (startSeconds <= 9) {
+    startTime = `${startMinutes}:0${startSeconds.toFixed(0)}`;
+  } else {
+    startTime = `${startMinutes}:${startSeconds.toFixed(0)}`;
+  }
+
+
+  // console.log({ startTime })
+  startTimeDiv.innerHTML = `${startTime}`
 
   progressbar.style.background = `linear-gradient(to right, rgb(34 255 0)  ${percProgress}%, #ccc ${percProgress}%)`
 
   if (percProgress === 100) {
     autoPlay();
   }
+
 })
 
 progressbar.addEventListener("input", () => {
@@ -405,28 +464,31 @@ progressbar.addEventListener("input", () => {
 })
 
 
+
+
+
 function autoPlay() {
-  if (songIndex >= 15) {
-    songIndex = -1
+  if (songId >= songsInfo.length - 1) {
+    songId = -1
   }
-  songIndex++;
-  audioObj.src = `${songsInfo[songIndex].filePath}`
+  songId++;
+  audioObj.src = `${songsInfo[songId].filePath}`
+
   if (audioObj.paused === true) {
     audioObj.play();
   } else {
     audioObj.pause();
   }
 
-  // afterContainerPlay(songIndex)
-  // afterPlay(songIndex);
+  afterContainerPlay()
+  afterPlay();
   // playORpause(audioObj)
   masterCoverChange()
 }
 
 
-
 // -----------------------------------------------
-// SECTION FOR HANDLE THE AUDIO OF SONGS 
+// SECTION FOR HANDLE VOLUME  OF THE SONGS 
 let perVolume
 const volumeEL = document.getElementById("volume-range")
 volumeEL.addEventListener("input", () => {
@@ -467,11 +529,22 @@ document.addEventListener("mouseover", (e) => {
 //user - column section
 const userDiv = document.getElementById("user-div");
 let open = false;
+const accountPanel = document.getElementById("show-account");
+
 userDiv.addEventListener("click", () => {
   const column_button = document.getElementById("column");
   column_button.classList.toggle("toggle");
-  document.getElementById('show-account').classList.toggle("toggle-account");
+  accountPanel.classList.toggle("toggle-account");
 })
+
+
+document.addEventListener("click", (e) => {
+  if (e.target !== userDiv && !accountPanel.contains(e.target)) {
+    // Clicked outside of userDiv and account panel
+    accountPanel.classList.remove("toggle-account");
+  }
+})
+
 
 
 // this listner for left nav-bar active links
@@ -560,3 +633,121 @@ closediv.addEventListener('click', () => {
 window.addEventListener('scroll', (e) => {
   document.querySelector('nav').classList.toggle('bgchange', window.scrollY > 100)
 })
+
+
+
+
+// --------------- SEARCH SECTION --------------------
+
+
+
+const homeBtn = document.getElementById("home");
+const main_section_div = document.getElementById("main-section");
+const searchInput = document.getElementById("search-song");
+const searchFrm = document.querySelector(".search-frm");
+
+homeBtn.addEventListener("click", () => {
+  search_sectionDiv.style.display = "none"
+  main_section_div.style.display = "block"
+})
+
+
+searchFrm.addEventListener("submit", (e) => {
+  e.preventDefault();
+})
+
+search_sectionBtn.addEventListener("click", () => {
+  console.log('serch section')
+  console.log(search_sectionDiv)
+  search_sectionDiv.style.display = "block"
+  main_section_div.style.display = "none"
+})
+
+searchInput.addEventListener("keyup", () => {
+  console.log("key down search")
+  let searchValue = searchInput.value;
+  if (searchValue !== "")
+    generateSearchSong(searchValue);
+  else {
+    const search_songs_items = document.querySelector(".search-songs-items");
+    search_songs_items.innerHTML = "";
+  }
+})
+
+
+
+function generateSearchSong(searchValue) {
+  const search_songs_items = document.querySelector(".search-songs-items");
+
+  let eldiv = songsInfo.map((song) => {
+    let songName = song.songName.toLowerCase();
+    if (songName.includes(searchValue.toLowerCase())) {
+      return `
+      <div id="" class="row-item search-song-items">
+        <div class="background-img"><img src="${song.coverPath}" alt="song-poster"></div>
+        <div id="${song.id}" class="container-play-button"></div>
+        <div class="song-name">${song.songName}</div>
+      </div>`
+    }
+    else {
+      return "";
+    }
+
+  }).join("");
+
+  search_songs_items.innerHTML = eldiv;
+
+  playSongOrPauseSearch();
+
+}
+
+
+function playSongOrPauseSearch() {
+  let searchSongItems = document.querySelectorAll(".search-song-items");
+
+  Array.from(searchSongItems).forEach((songItem) => {
+    let playBtn = songItem.children[1];
+    playBtn.addEventListener("click", (e) => {
+      songId = playBtn.id;
+      audioObj.src = songsInfo[songId].filePath;
+      console.log({ songId });
+      afterContainerPlay();
+      afterPlay();
+      masterCoverChange();
+      playORpause();
+      e.target.classList.add("play-button-pause");
+    })
+  })
+}
+
+
+
+
+
+
+// ----------------- SET TIME OR SHOW TIME BASE GREETING -------------
+
+// Depending on timezone, your results will vary
+const time = new Date();
+
+console.log(time.toLocaleTimeString());
+
+const currentTime = time.toLocaleTimeString()
+const hour = time.getHours();
+const greetig_msg = document.getElementById("greeting_msg");
+
+setGreeting();
+
+function setGreeting() {
+  if (hour >= 0 && hour < 12) {
+    console.log("It is morning.");
+    greetig_msg.innerHTML = `Good Morning`;
+  } else if (hour >= 12 && hour < 5) {
+    greetig_msg.innerHTML = `Good Afternoon`;
+  } else {
+    console.log("It is evening.");
+    greetig_msg.innerHTML = `Good Evening`;
+  }
+}
+
+// Expected output: "1:15:30 AM"
