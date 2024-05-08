@@ -10,7 +10,8 @@ if (mediaQuery.matches) {
         { name: "Snake Game", path: "assets/snakeMobile.png" },
         { name: "Car Move", path: "assets/carMobile.png" },
         { name: "Live Code Editor", path: "assets/livecodeeditormobile.png" },
-        { name: "Grocery List", path: "assets/grocerymobile.png" }
+        { name: "Grocery List", path: "assets/grocerymobile.png" },
+        { name: "Countries App", path: "assets/countrieAppMobile.png" }
     ]
 
     const containItem = document.querySelectorAll('.containe-item');
@@ -43,7 +44,8 @@ if (mediaQuery1.matches) {
         { name: "Snake Game", path: "assets/snakeGame.png" },
         { name: "Car Move", path: "assets/carMove.png" },
         { name: "Live Code Editor", path: "assets/livecodeeditorpc.png" },
-        { name: "Grocery List", path: "assets/grocerypc.png" }
+        { name: "Grocery List", path: "assets/grocerypc.png" },
+        { name: "Countries App", path: "assets/countrieAppDesk.png" }
     ]
 
     const containItem = document.querySelectorAll('.containe-item');
