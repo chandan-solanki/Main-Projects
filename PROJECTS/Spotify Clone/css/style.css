@@ -251,7 +251,8 @@ nav {
   /* border: 2px solid red; */
   z-index: +2;
   left: 0px;
-  top: calc(100% - 88px);;
+  top: calc(100% - 88px);
+  ;
   background-color: #000000;
   width: 100%;
   display: flex;
@@ -999,7 +1000,7 @@ header h1 {
   filter: invert(100);
 }
 
-.search-songs-items{
+.search-songs-items {
   display: flex;
   padding: 1rem;
   gap: 1rem;
